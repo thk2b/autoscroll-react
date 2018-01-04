@@ -1,6 +1,6 @@
 {
   "name": "autoscroll-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "autoscroll a react component",
   "main": "lib/index.js",
   "dependencies": {
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thk2b/react-autoscroll.git"
+    "url": "git+https://github.com/thk2b/autoscroll-react.git"
   },
   "author": "thk2b",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thk2b/react-autoscroll/issues"
+    "url": "https://github.com/thk2b/autoscroll-react/issues"
   },
-  "homepage": "https://github.com/thk2b/react-autoscroll#readme"
+  "homepage": "https://github.com/thk2b/autoscroll-react#readme"
 }
