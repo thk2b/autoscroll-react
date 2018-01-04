@@ -30,7 +30,7 @@ export default Component => class extends React.Component {
     }
 
     render(){
-        return <Component 
+        return <Component
             {...this.props}
             ref={ el => this._el = ReactDOM.findDOMNode(el) }
             onScroll={ e => this.handleScroll(e) }
