@@ -1,6 +1,6 @@
 {
   "name": "autoscroll-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "autoscroll a react component",
   "main": "lib/index.js",
   "dependencies": {
