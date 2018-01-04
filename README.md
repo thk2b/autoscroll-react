@@ -2,7 +2,7 @@
 
 Autoscroll a react component
 
-##install
+## install
 
 `npm install react-autoscroll`
 
