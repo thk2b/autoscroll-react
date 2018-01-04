@@ -1,3 +1,5 @@
+🚧 At this stage, this project is not unit-tested. Use with caution. 🚧
+
 # autoscroll-react
 
 Autoscroll a react component
