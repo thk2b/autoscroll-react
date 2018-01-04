@@ -31,7 +31,7 @@ class MyList extends React.Component {
 export default Autoscroll(MyList)
 ```
 
-`Autoscroll` returns the passed component without any additional markup.
+`Autoscroll(Component)`: returns the passed component without any additional markup.
 It scrolls the root node rendered by the component to the bottom whenever it updates, but not if the user has scrolled up.
 
 ⚠️ You must Explicitly pass down props to the wrapped component. ⚠️
