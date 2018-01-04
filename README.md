@@ -7,11 +7,11 @@ Autoscroll a react component
 [![npm version](https://badge.fury.io/js/autoscroll-react.svg)](https://badge.fury.io/js/autoscroll-react)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-## install
+## Install
 
 `npm install --save autoscroll-react`
 
-## usage
+## Usage
 
 ```js
 import React from 'react'
@@ -40,3 +40,7 @@ export default Autoscroll(MyList)
 It scrolls the root node rendered by the component to the bottom whenever it updates, but not if the user has scrolled up.
 
 ⚠️ You must Explicitly pass down props to the wrapped component. ⚠️
+
+## Build
+
+Build by running `npm install` followed by `npm run build`
