@@ -4,7 +4,7 @@ Autoscroll a react component
 
 ## install
 
-`npm install react-autoscroll`
+`npm install --save react-autoscroll`
 
 ## usage
 
