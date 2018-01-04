@@ -7,13 +7,7 @@ Autoscroll a react component
 [![npm version](https://badge.fury.io/js/autoscroll-react.svg)](https://badge.fury.io/js/autoscroll-react)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-<<<<<<< HEAD
 ## Install
-=======
-Contributions welcomed and encouraged 🤝
-
-## install
->>>>>>> 940a0881967185bbd99b3accd59131c768d2e99b
 
 `npm install --save autoscroll-react`
 
