@@ -33,5 +33,6 @@ export default Autoscroll(MyList)
 
 You must Explicitly pass down props in the wrapped component.
 
-`Autoscroll` returns the passed component without any additional markup. It attaches a signle event listener.
-It scrolls the component to the bottom whenever it updates, except if the user has scrolled up. 
+##API
+`Autoscroll` returns the passed component without any additional markup.
+It scrolls the root node rendered by the component to the bottom whenever it updates, but not if the user has scrolled up.
