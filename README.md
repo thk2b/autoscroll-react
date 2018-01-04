@@ -1,8 +1,11 @@
 🚧 At this stage, this project is not unit-tested but works as expected. Use with caution. 🚧
 
-# autoscroll-react
+# autoscroll-react 
 
 Autoscroll a react component
+
+[![npm version](https://badge.fury.io/js/duck-check.svg)](https://badge.fury.io/js/duck-check)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 ## install
 
