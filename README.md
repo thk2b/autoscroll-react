@@ -1,16 +1,16 @@
-# react-autoscroll
+# autoscroll-react
 
 Autoscroll a react component
 
 ## install
 
-`npm install --save react-autoscroll`
+`npm install --save autoscroll-react`
 
 ## usage
 
 ```js
 import React from 'react'
-import Autoscroll from 'react-autoscroll'
+import Autoscroll from 'autoscroll-react'
 
 class MyList extends React.Component {
     render(){

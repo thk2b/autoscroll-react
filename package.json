@@ -1,5 +1,5 @@
 {
-  "name": "react-autoscroll",
+  "name": "autoscroll-react",
   "version": "1.0.0",
   "description": "autoscroll a react component",
   "main": "src/index.js",
