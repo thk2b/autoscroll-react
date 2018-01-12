@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom'
 
 const hasOverflow = el => el.clientHeight < el.scrollHeight
 
-const isScrolledDown = el => {
+const isScrolledDown = (el, threshold) => {
     const bottom = el.scrollTop + el.clientHeight
-    return bottom >= el.scrollHeight - 150
+    return bottom >= el.scrollHeight - threshold
 }
 
 const scrollDown = el => el.scrollTop = el.scrollHeight - el.clientHeight
 
-export default Component => class extends React.PureComponent {
+export default (Component, { isScrolledDownThreshold = 150 } = { }) => class extends React.PureComponent {
     constructor(props){
         super(props)
         this._hasScrolledUp = false /* whether the user has scrolled up */
@@ -24,7 +24,7 @@ export default Component => class extends React.PureComponent {
     }
 
     handleScroll(e){
-        if(isScrolledDown(this._el)){
+        if(isScrolledDown(this._el, isScrolledDownThreshold)){
             this._hasScrolledUp = false
         } else {
             this._hasScrolledUp = true
