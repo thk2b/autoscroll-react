@@ -13,4 +13,4 @@ class List extends React.Component {
     }
 }
 
-export default Autoscroll(List)
+export default Autoscroll(List, {isScrolledDownThreshold: 100})
