@@ -1,4 +1,4 @@
-🚧 At this stage, this project is not unit-tested but works as expected. Use with caution. 🚧
+🚧 At this stage, this project is not unit-tested but works as expected. Minor optimizations are planned. Use with caution. 🚧
 
 # autoscroll-react 
 
