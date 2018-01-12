@@ -17,6 +17,8 @@ Autoscroll a react component
 import React from 'react'
 import Autoscroll from 'autoscroll-react'
 
+import Item from './Item'
+
 class MyList extends React.Component {
     render(){
         const { items, ...props } = this.props
