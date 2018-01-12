@@ -22,6 +22,11 @@
   font-size: large;
 }
 
+.List {
+  overflow-y: scroll;
+  height: 300px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
