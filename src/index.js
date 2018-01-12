@@ -10,7 +10,7 @@ const isScrolledDown = el => {
 
 const scrollDown = el => el.scrollTop = el.scrollHeight - el.clientHeight
 
-export default Component => class extends React.Component {
+export default Component => class extends React.PureComponent {
     constructor(props){
         super(props)
         this._hasScrolledUp = false /* whether the user has scrolled up */
