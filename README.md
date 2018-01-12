@@ -51,8 +51,3 @@ It scrolls the root node rendered by the component to the bottom whenever it upd
 
 The `isScrolledDownThreshold` option is used when determining whether the user has scrolled back to the bottom. If the element's `scrollBottom` is within `isScrolledDownThreshold`px of the maximum scroll (`scrollHeight`), the component will scroll down on the next updates. 
 This option exists because scrolling almost all the way down, but not entirely, can be interpreted as a sign that the user intends to see the bottom of the list. 
-
-
-## Build
-
-Build by running `npm install` followed by `npm run build`
