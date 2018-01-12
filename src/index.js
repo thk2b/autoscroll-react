@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const hasOverflow = el => el.clientHeight < el.scrollHeight
+
 const isScrolledDown = el => {
     const bottom = el.scrollTop + el.clientHeight
     return bottom >= el.scrollHeight - 150
@@ -16,7 +18,7 @@ export default Component => class extends React.Component {
     }
     
     componentDidUpdate(){
-        if(!this._hasScrolledUp){
+        if(!this._hasScrolledUp && hasOverflow(this._el)){
             scrollDown(this._el)
         }
     }

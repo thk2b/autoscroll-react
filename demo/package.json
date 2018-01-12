@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "autoscroll-react": "^1.0.2",
+    "autoscroll-react": "2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "thk2b-test": "^1.0.7"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
