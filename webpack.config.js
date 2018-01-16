@@ -5,7 +5,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'index.js',
-        library: 'thk2b-test',
+        library: 'autoscroll-react',
         libraryTarget: 'commonjs2'
 
     },
