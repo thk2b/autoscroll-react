@@ -13,22 +13,18 @@ const scrollDown = el => el.scrollTop = el.scrollHeight - el.clientHeight
 export default (Component, { isScrolledDownThreshold = 150 } = { }) => class extends React.PureComponent {
     constructor(props){
         super(props)
-        this._hasScrolledUp = false /* whether the user has scrolled up */
+        this._isScrolledDown = true /* whether the user has scrolled down */
         this._el = null
     }
     
     componentDidUpdate(){
-        if(!this._hasScrolledUp && hasOverflow(this._el)){
+        if(this._isScrolledDown && hasOverflow(this._el)){
             scrollDown(this._el)
         }
     }
 
     handleScroll(e){
-        if(isScrolledDown(this._el, isScrolledDownThreshold)){
-            this._hasScrolledUp = false
-        } else {
-            this._hasScrolledUp = true
-        }
+        this._isScrolledDown = isScrolledDown(this._el, isScrolledDownThreshold)
     }
 
     render(){
