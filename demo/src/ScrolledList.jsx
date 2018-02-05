@@ -1,6 +1,5 @@
 import React from 'react'
-import Autoscroll from 'autoscroll-react' //CHANGE THIS BACK
-// import Autoscroll from '../src/index.js' 
+import Autoscroll from 'autoscroll-react'
 
 class List extends React.Component {
     render(){

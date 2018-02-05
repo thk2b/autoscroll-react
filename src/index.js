@@ -16,17 +16,18 @@ export default (Component, { isScrolledDownThreshold = 150 } = { }) => class ext
         this._isScrolledDown = true /* whether the user has scrolled down */
         this._el = null
     }
-    
-    componentDidUpdate(){
+    scrollDownIfNeeded(){
         if(this._isScrolledDown && hasOverflow(this._el)){
             scrollDown(this._el)
         }
     }
-
     handleScroll(e){
         this._isScrolledDown = isScrolledDown(this._el, isScrolledDownThreshold)
     }
-
+    componentDidMount(){ 
+        this.scrollDownIfNeeded() }
+    componentDidUpdate(){ 
+        this.scrollDownIfNeeded() }
     render(){
         return <Component
             {...this.props}
