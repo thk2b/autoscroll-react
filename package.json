@@ -1,6 +1,6 @@
 {
   "name": "autoscroll-react",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "autoscroll a react component",
   "main": "build/index.js",
   "scripts": {
