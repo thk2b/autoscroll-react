@@ -13,7 +13,7 @@ Autoscroll a react component
 
 ```js
 import React from 'react'
-import Autoscroll from 'autoscroll-react'
+import autoscroll from 'autoscroll-react'
 
 import Item from './Item'
 
@@ -21,7 +21,7 @@ class MyList extends React.Component {
     render(){
         const { items, ...props } = this.props
         return (
-            <ul { ...props } >{ //  ⚠️ You MUST pass down props ⚠️
+            <ul { ...props } >{ //  ⚠️ You MUST pass down props, otherwise the event listener will not be attached ⚠️
                 items.map(
                     item => <Item 
                         key={ item.id } 
@@ -33,20 +33,24 @@ class MyList extends React.Component {
     }
 }
 
-export default Autoscroll(MyList)
+export default autoscroll(MyList)
 ```
 Then, in another file:
 ```js
 import React from 'react'
 import MyList from './MyList'
 
-export default ({ items }) => <div>
-    <MyList items={items} /> /* pass props directly */
+export default ({ items, fetchMoreItems }) => <div>
+    <MyList
+        items={items} /* pass props directly to your component */
+        onScrolledTop={e => fetchMoreItems()} /* add props that are intercepted by autoscroll */
+        onScroll={e => console.log('the list was scrolled')} /* */
+    />
     {/* ... */}
 </div>
 ```
 
-`Autoscroll(Component)`: returns a React `PureComponent` that renders the passed component without any additional markup. Whenever the wrapped component updates, it is scrolled to the bottom, unless the user has scrolled up.
+`autoscroll(Component)`: returns a React `PureComponent` that renders the passed component without any additional markup. Whenever the wrapped component updates, it is scrolled to the bottom, unless the user has scrolled up.
 
 ## ⚠️  caveats ⚠️ 
 
@@ -56,7 +60,13 @@ export default ({ items }) => <div>
 
 ## options
 
-`Autoscroll(Component, { isScrolledDownThreshold: 150 /*default*/})`
+Optional props: 
+
+- `onScroll`: called whenever the list is scrolled. This is not an event listener.
+- `onScrolledTop`: called when the list is scrolled to the top.
+Pass these props when rendering the wrapped list component.
+
+`autoscroll(Component, { isScrolledDownThreshold: 150 /*default*/})`
 
 The `isScrolledDownThreshold` option is used when determining whether the user has scrolled back to the bottom. If the element's `scrollBottom` is within `isScrolledDownThreshold`px of the maximum scroll (`scrollHeight`), the component will scroll down on the next updates. 
 This option exists because scrolling almost all the way down, but not entirely, can be interpreted as a sign that the user intends to see the bottom of the list.
