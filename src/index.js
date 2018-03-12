@@ -28,7 +28,7 @@ export default (Component, { isScrolledDownThreshold = 150 } = { }) => class ext
         if(isScrolledTop(this._el)){
             this.props.onScrolledTop && this.props.onScrolledTop(e)
         }
-        this.props.onScroll && this.props.onScroll(e)
+        this.props.onScrolled && this.props.onScrolled(e)
     }
     componentDidMount(){ 
         this.scrollDownIfNeeded()
@@ -37,7 +37,7 @@ export default (Component, { isScrolledDownThreshold = 150 } = { }) => class ext
         this.scrollDownIfNeeded()
     }
     render(){
-        const { onScroll, onScrolledTop, ...rest } = this.props
+        const { onScrolled, onScrolledTop, ...rest } = this.props
         return <Component
             {...rest}
             ref={ el => this._el = ReactDOM.findDOMNode(el) }
