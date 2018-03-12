@@ -28,7 +28,10 @@ class App extends React.Component {
         <button 
             onClick={e => this.setState({ items: items.concat(this.state.inputText)})}
         >add</button>
-        <ScrolledList items={items}/>
+        <ScrolledList
+          items={items}
+          onScrolledTop={e => alert('scrolled to top!')}
+        />
       </div>
     );
   }
