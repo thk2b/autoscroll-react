@@ -43,8 +43,8 @@ import MyList from './MyList'
 export default ({ items, fetchMoreItems }) => <div>
     <MyList
         items={items} /* pass props directly to your component */
-        onScrolledTop={e => fetchMoreItems()} /* add props that are intercepted by autoscroll */
-        onScroll={e => console.log('the list was scrolled')} /* */
+        onScrolledTop={e => fetchMoreItems()} /* add props to be intercepted by autoscroll */
+        onScrolled={e => console.log('the list was scrolled')}
     />
     {/* ... */}
 </div>
@@ -62,7 +62,7 @@ export default ({ items, fetchMoreItems }) => <div>
 
 Optional props: 
 
-- `onScroll`: called whenever the list is scrolled. This is not an event listener.
+- `onScrolled`: called whenever the list is scrolled. This is not an event listener.
 - `onScrolledTop`: called when the list is scrolled to the top.
 Pass these props when rendering the wrapped list component.
 
