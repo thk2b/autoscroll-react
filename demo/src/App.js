@@ -30,6 +30,7 @@ class App extends React.Component {
         >add</button>
         <ScrolledList
           items={items}
+          onScroll={e => console.log('the list was scrolled!')}
           onScrolledTop={e => alert('scrolled to top!')}
         />
       </div>
