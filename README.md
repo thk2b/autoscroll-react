@@ -9,6 +9,10 @@ Autoscroll a react component
 
 `npm install --save autoscroll-react`
 
+## What it does
+
+This package exports a function that takes a `React.Component` and returns a `React.PureComponent` that renders the passed component without any additional markup. Whenever the wrapped component updates, it is scrolled to the bottom, unless the user has scrolled up.In addition, when the list is resized (when content is added), it will be scrolled in order to keep the user's original scroll position. 
+
 ## Usage
 
 ```js
@@ -49,8 +53,6 @@ export default ({ items, fetchMoreItems }) => <div>
     {/* ... */}
 </div>
 ```
-
-`autoscroll(Component)`: returns a React `PureComponent` that renders the passed component without any additional markup. Whenever the wrapped component updates, it is scrolled to the bottom, unless the user has scrolled up.
 
 ## ⚠️  caveats ⚠️ 
 
