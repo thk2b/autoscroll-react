@@ -26,8 +26,11 @@ class App extends React.Component {
             onChange={e => this.setState({ inputText: e.target.value })}
         />
         <button 
-            onClick={e => this.setState({ items: items.concat(this.state.inputText)})}
+            onClick={e => this.setState({ items: [this.state.inputText].concat(items)})}
         >add</button>
+        <button
+          onClick={e => this.setState({ items: '12345'.split('').concat(this.state.items)})}
+        >add 5 to begining</button>
         <ScrolledList
           items={items}
           onScrolled={e => console.log('the list was scrolled!')}

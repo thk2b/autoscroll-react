@@ -9,7 +9,7 @@ class List extends React.Component {
             className="List"
             {...this.props }
         >{ items.map(
-            item => <li key={item}>{item}</li>
+            item => <li >{item}</li>
         ) }</ul>
     }
 }
