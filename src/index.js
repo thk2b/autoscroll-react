@@ -36,7 +36,7 @@ export default (Component, { isScrolledDownThreshold = 150 } = { }) => class ext
     componentDidMount(){ 
         this.scrollDownIfNeeded()
     }
-    componentWillUpdate = (nextProps, nextState) => {
+    componentWillUpdate(nextProps, nextState){
         this.scrollHeight = this._el.scrollHeight
     }
     
