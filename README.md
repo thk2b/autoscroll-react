@@ -70,6 +70,7 @@ export default ({ items, fetchMoreItems }) => <div>
 - The wrapped component must be a Class-based component, not a functional one, because `Autoscroll` uses a `ref`.
 - This package is agnostic about any CSS you use. However, it assumes that you provide the adequate CSS to make the wrapped component have a scroll bar. (ie. `overflow-y:scroll;` and a set `height`)
 
+# API
 ## props
 
 The `autoscroll` higher-order-component supports the followig props
