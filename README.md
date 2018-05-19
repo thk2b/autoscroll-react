@@ -13,7 +13,15 @@ Autoscroll a react component
 
 ## What it does
 
-This package exports a function that takes a `React.Component` and returns a `React.PureComponent` that renders the passed component without any additional markup. Whenever the wrapped component updates, it is scrolled to the bottom, unless the user has scrolled up. In addition (since 3.1.0), when the list is resized (when content is added), it will be scrolled in order to keep the user's original scroll position. 
+This package exports a function that takes a `React.Component` <b>class</b> and returns a `React.PureComponent` that renders the passed component without any additional markup. It adds the following behaviours to the wrapped component:
+
+- Whenever the list updates, it is scrolled to the bottom, unless the user has scrolled up.
+
+Suppose the wrapped component is a chat. When a message is added, the chat should be scrolled to the bottom to show the lastest message. But if the user has scrolled up, and a new message is posted by another user, the list should *not* scroll down to show the new message, as the user is reading another message.
+
+- If the list is scrolled all the way up and content is added, the current scroll position is preserved.
+
+This feature was added to suport infinite scrolling lists where new content is fetched when the list is scrolled all the way up. Again, consider the case where the wrapped component is a chat. When the user scrolls all the way up, the app (somehow) gets older messages from the server and adds them to the list. By default, the current scroll position of the list is preserved, leading to the the list showing the first of the newly added messages instead of the previous last message. This means the list 'jumps' when content is added to the top of the list. A pragmatic solution to this issue is to scroll down the list by the correct amount when it updates and is scrolled all the way up. But this causes some issues when the list is scrolled all the way up and content is added to the bottom.
 
 ## Usage
 
