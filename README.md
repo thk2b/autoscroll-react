@@ -70,16 +70,19 @@ export default ({ items, fetchMoreItems }) => <div>
 - The wrapped component must be a Class-based component, not a functional one, because `Autoscroll` uses a `ref`.
 - This package is agnostic about any CSS you use. However, it assumes that you provide the adequate CSS to make the wrapped component have a scroll bar. (ie. `overflow-y:scroll;` and a set `height`)
 
+## props
+
+The `autoscroll` higher-order-component supports the followig props
+
+|name|default|description|
+|-|-|-|
+|OnScrolled|`undefined`|called without arguments whenever the list is scrolled|
+|OnScrolledTop|`undefined`|called without arguments whenever the list is scrolled to the top|
+
 ## options
 
-Optional props: 
+When creating a component by calling the `autoscroll` higher-order-component, an options object can be passed in as the second argument. It may contain the following keys:
 
-- `onScrolled`: called whenever the list is scrolled. This is not an event listener.
-- `onScrolledTop`: called when the list is scrolled to the top.
-Pass these props when rendering the wrapped list component.
-
-`autoscroll(Component, { isScrolledDownThreshold: 150 /*default*/})`
-
-The `isScrolledDownThreshold` option is used when determining whether the user has scrolled back to the bottom. If the element's `scrollBottom` is within `isScrolledDownThreshold`px of the maximum scroll (`scrollHeight`), the component will scroll down on the next updates. 
-This option exists because scrolling almost all the way down, but not entirely, can be interpreted as a sign that the user intends to see the bottom of the list.
-Set it to 0 to enforce scrolling all the way down. 
+|name|default|description|
+|-|-|-|
+|isScrolledDownThreshold|150(px)|Used when determining whether the user has scrolled back to the bottom. If the element's `scrollBottom` is within `isScrolledDownThreshold`px of the maximum scroll (`scrollHeight`), the component will scroll down on the next updates. This option exists because scrolling almost all the way down, but not entirely, can be interpreted as a sign that the user intends to see the bottom of the list. Set it to 0 to enforce scrolling all the way down. |
