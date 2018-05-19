@@ -8,9 +8,28 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-        inputText: '',
-        items: 'abcdefghijklmnopqrstuvwxyz1234567890'.split('')
+      items: this.createItems(20)
     }
+  }
+  createItem(){
+    return Math.random()
+  }
+  createItems(n){
+    const arr = []
+    for (let i = 0; i < n; i++){
+      arr.push(this.createItem())
+    }
+    return arr
+  }
+  addItemToStart(){
+    this.setState({
+      items: [this.createItem(), ...this.state.items]
+    })
+  }
+  addItemToEnd(){
+    this.setState({
+      items: this.state.items.concat(this.createItem())
+    })
   }
   render() {
     const { items } = this.state
@@ -21,16 +40,16 @@ class App extends React.Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br/>
-        <input type="text" 
-            value={this.state.inputText}
-            onChange={e => this.setState({ inputText: e.target.value })}
-        />
-        <button 
-            onClick={e => this.setState({ items: [this.state.inputText].concat(items)})}
-        >add</button>
         <button
-          onClick={e => this.setState({ items: '12345'.split('').concat(this.state.items)})}
-        >add 5 to begining</button>
+          onClick={e => this.addItemToEnd()}
+        >
+          add 1 to end
+        </button>
+        <button
+          onClick={e => this.addItemToStart()}
+        >
+          add 1 to start
+        </button>
         <ScrolledList
           items={items}
           onScrolled={e => console.log('the list was scrolled!')}
