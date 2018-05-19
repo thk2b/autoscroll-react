@@ -12,7 +12,7 @@ class App extends React.Component {
     }
   }
   createItem(){
-    return Math.random()
+    return Math.random() * 10
   }
   createItems(n){
     const arr = []
@@ -26,6 +26,11 @@ class App extends React.Component {
       items: [this.createItem(), ...this.state.items]
     })
   }
+  addItemsToStart(n){
+    this.setState({
+      items: [...this.createItems(n), ...this.state.items]
+    })
+  } 
   addItemToEnd(){
     this.setState({
       items: this.state.items.concat(this.createItem())
@@ -49,6 +54,11 @@ class App extends React.Component {
           onClick={e => this.addItemToStart()}
         >
           add 1 to start
+        </button>
+        <button
+          onClick={e => this.addItemsToStart(5)}
+        >
+          add 5 to start
         </button>
         <ScrolledList
           items={items}
