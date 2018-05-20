@@ -1,9 +1,5 @@
 # autoscroll-react 
 
-Autoscroll a react component
-
-[live demo](https://codesandbox.io/s/0315qvkx20)
-
 [![npm version](https://badge.fury.io/js/autoscroll-react.svg)](https://badge.fury.io/js/autoscroll-react)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
@@ -12,6 +8,8 @@ Autoscroll a react component
 `npm install --save autoscroll-react`
 
 ## What it does
+
+[live demo](https://codesandbox.io/s/0315qvkx20)
 
 This package exports a function that takes a `React.Component` <b>class</b> and returns a `React.PureComponent` that renders the passed component without any additional markup. It adds the following behaviours to the wrapped component:
 
