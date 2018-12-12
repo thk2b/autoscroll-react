@@ -75,8 +75,8 @@ The `autoscroll` higher-order-component supports the followig props
 
 |name|default|description|
 |-|-|-|
-|OnScrolled|`undefined`|called without arguments whenever the list is scrolled|
-|OnScrolledTop|`undefined`|called without arguments whenever the list is scrolled to the top|
+|onScrolled|`undefined`|called without arguments whenever the list is scrolled|
+|onScrolledTop|`undefined`|called without arguments whenever the list is scrolled to the top|
 
 ## options
 
